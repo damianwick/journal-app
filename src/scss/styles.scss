@@ -1,0 +1,733 @@
+body{
+    background-color: #274057;
+    padding: 0px;
+    font-family: 'Lato', sans-serif;
+}
+
+.app-container{
+    width: 620px;
+    height: auto;
+    margin: 50px auto auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-container{
+    width: 350px;
+    height: 350px;
+    z-index: -1;
+    .circle-header{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        margin: -150px auto;
+        background-image: linear-gradient(-135deg, 
+        rgba(245, 113, 44, 56%), 
+        rgba(245, 113, 44, 41%), 
+        rgba(245, 113, 44, 25%), 
+        rgba(245, 113, 44, 10%), 
+        rgba(245, 113, 44, 0));
+        filter: blur(0.1rem);
+        z-index: -999;
+    }    
+    h1{
+        position: relative;
+        color: #fff;
+        width: 80%;
+        margin: 130px auto 0;
+        z-index: 999;
+        text-align: center;
+        font-family: 'bebas neue', cursive;
+        font-size: 3em;
+    }
+}
+
+.input-field-container{ 
+    margin: -60px auto;
+    width: 100%;
+    height: 132px;
+    .entry-textarea{
+        margin: 0 auto;
+        display: block;
+        background-color: #fff;
+        width: 100%;
+        height: calc(100% - 32px);
+        padding: 10px;
+        box-sizing: border-box;
+        border: none;
+        resize: none;
+        overflow: scroll;
+    }
+    .entry-textarea::-webkit-scrollbar{
+        display: none;
+    }
+    .entry-textarea:empty:before {
+        content: attr(data-placeholder);
+        opacity: 30%;
+    }
+}
+
+.textarea-divider{
+    margin: 0 auto;
+    background-color: #274057;
+    width: 100%;
+    height: 2px;
+}
+
+.textarea-nav{
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+    border: none;
+    background-color: #fff;
+}
+
+.text-style-buttons{
+    float: left;
+    display: inline;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    flex-direction: row-reverse;
+    button{
+        width: 35px;
+        height: 100%;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    #bold-btn{
+        font-weight: bold;
+    }
+    #italic-btn{
+        font-style: italic;
+    }
+    #underline-btn{
+        text-decoration: underline;
+    }
+    button:hover{
+        background-color: #F5D12C;
+    }
+    .active{
+        background-color: #F5D12C;
+    }
+}
+
+.button-container{
+    margin-right: 0;
+    float: right;
+    height: 100%;
+    width: 80px;
+    // background-color: pink;
+    button{
+        font-size: 20px;
+        font-family: 'bebas neue', cursive;
+        font-weight: bold;
+        margin: 0 auto;
+        cursor: pointer;
+        border: none;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        text-align: center
+    }
+}
+
+.button-container:hover{
+    background-color: #07F5EA;
+}
+
+h2{
+    font-family: 'bebas neue', cursive;
+    font-size: 2em;
+    color: #fff;
+    height: 35px;
+    margin: 100px auto 50px;
+}
+
+.entries-container{
+    align-self: center;
+    overflow: scroll;
+    width: 100%;
+    min-height: 400px;
+
+}
+
+.entries-container::-webkit-scrollbar {
+    display: none;
+}
+
+.entries-container:empty::before{
+    content: attr(data-placeholder);
+    height: 20px;
+    display: block;
+    width: 100%;
+    text-align: center;  
+    color: #fff;
+}
+
+.entry-container{
+    position: relative;
+    padding: 0;
+    width: 100%;
+    height: 110px;
+    margin: 20px auto;
+    overflow: hidden;
+    .date-container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        height: 20%;
+        color: #fff;
+    }
+    .inner-entry-container{
+        background-color: #fff;
+        display: flex;
+        flex-direction: row;
+        height: 80%;
+        width: 100%;
+        overflow: hidden;
+        p{ 
+            padding: 5px;
+            width: 100%;
+            margin: 0px;
+            word-wrap: break-word;            
+        }
+        .entry-options{
+            position: absolute;
+            align-self: flex-end;
+            padding: 0px;
+            width: 55px;
+            bottom: 5px;
+            right: 0px;
+            opacity: 0;
+            height: 25px;
+        }
+    }
+}
+
+.edit-btn{
+    background-image: url(../../assets/edit.svg);
+    background-color: transparent;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border: none;
+    width: 25px;
+    height: 25px;
+}
+
+.delete-btn{
+    background-image: url(../../assets/delete.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    margin-left: 5px;
+    width: 25px;
+    height: 25px;
+}
+
+.expand-btn{
+    background-image: url(../../assets/expand.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    top: 0;
+    right: 0;
+    float: right;
+    height: 25px;
+    width: 25px;
+    margin: 5px 5px auto auto;
+}
+
+.edit-btn:hover, .expand-btn:hover{
+    background-color: #F5D12C;
+}
+
+.delete-btn:hover{
+    background-color: #F5712C;
+}
+
+.entry-container:hover .entry-options{
+    opacity: 100%;
+}
+
+.opacity-20{
+    opacity: 20%;
+}
+
+.entry-window{
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 900px;
+    max-height: 90%;
+    background-color: #546370;
+    .inner-window{
+        position: relative;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 650px;
+        height: 850px;
+        max-height: 95%;
+        margin: 0 auto;
+        background-color: #fff;
+        box-sizing: border-box;
+        .text-expanded-window{
+            margin-top: 20px; 
+            width: 100%;
+            height: 595px;
+            padding: 5px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            word-wrap: break-word;    
+        }
+        p{
+        padding: 5px;
+        }
+    }
+    .closeBtn{
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 25px;
+        border: none;
+        width: 25px;
+        height: 25px;   
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+    }
+    .closeBtn i{
+        width: 100%;
+        height: 100%;
+        color: white;
+    }
+    .closeBtn:hover{
+        background-color: #F5D12C;
+    }
+    .edit-textarea{
+        height: 95%;
+        width: 100%;
+        padding: 5px;
+        box-sizing: border-box;
+        overflow-y: auto;
+    }
+    .edit-textarea-nav{
+        display: block;
+        width: 100%;
+        height: 5%;
+    }
+    .textarea-divider{
+        margin: 0 auto;
+        background-color: #274057;
+        width: 100%;
+        height: 2px;
+    }
+}
+
+//background
+.circle{
+    border-radius: 50%;
+    position: fixed;
+    z-index: -1;
+    filter: blur(0.1rem);
+}
+.sm-circle{
+    width: 5vw;
+    height: 5vw;
+    max-width: 100px;
+    max-height: 100px;   
+}
+.sm-md-circle{
+    width: 15vw;
+    height: 15vw;
+    max-width: 200px;
+    max-height: 200px;
+}
+.md-circle{
+    width: 20vw;
+    height: 20vw;
+    max-width: 300px;
+    max-height: 300px;
+}
+.lg-circle{
+    width: 30vw;
+    height: 30vw;
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.position-1{
+    left: 10%;
+    top: 15%;
+}
+.position-2{
+    left: 80%;
+    top: 2%;
+    opacity: 70%;
+}
+.position-3{
+    left:35%;
+    top:60%;
+}
+.position-4{
+    left: 60%;
+    top: 30%;
+    opacity: 80%;
+}
+.position-5{
+    left:5%;
+    top:70%;
+}
+.position-6{
+    left:80%;
+    top:85%;
+    opacity: 20%;
+}
+.position-7{
+    left:30%;
+    top:5%;
+    opacity: 50%;
+}
+
+.color-1{
+    background-image: linear-gradient(-135deg, 
+    rgba(85, 20, 93, 26%), 
+    rgba(245, 30, 82, 21%), 
+    rgba(245, 76, 61, 13%), 
+    rgba(245, 113, 44, 0));
+    
+}
+.color-2{
+    background-image: linear-gradient(-135deg,
+     rgba(155, 245, 7, 57%), 
+     rgba(185, 200, 20, 45%), 
+     rgba(217, 155, 32, 11%), 
+     transparent);
+}
+.color-3{
+    background-image: linear-gradient(-135deg, 
+    rgba(85, 29, 0, 70%), 
+    rgba(161, 69, 21, 36%), 
+    rgba(210, 94, 34, 0%), 
+    transparent);
+}
+.color-4{
+    background-image: linear-gradient(-135deg, 
+    rgba(245, 113, 44, 40%),
+    rgba(245, 209, 44, 20%),
+    transparent);
+}
+.color-5{
+    background-image: linear-gradient(-135deg, 
+    rgba(7, 245, 234,50%), 
+    rgba(81, 204, 175, 48%), 
+    rgba(144, 169, 125, 12%), 
+    transparent, transparent); 
+}
+.color-6{
+    background-image: linear-gradient(-135deg,
+    rgba(7, 245, 234, 100%), 
+    rgba(87, 201, 170, 66%), 
+    rgba(185, 157, 108, 33%),
+    rgba(245, 113, 44, 0), 
+    transparent);    
+}
+.color-7{
+    background-image: linear-gradient(-135deg, 
+    rgba(20, 205, 20, 60%),
+    rgba(87, 201, 170, 36%), 
+    rgba(185, 157, 108, 23%),
+    rgba(245, 113, 44, 0),
+    transparent);
+}
+
+
+@media only screen and (max-width: 1367px){
+    .position-1{
+        left: 5%;
+        top: 25%;
+    }
+
+    .position-4{
+        left: 90%;
+    }
+
+    .position-5{
+        left: 2%;
+        top: 90%;
+    }
+
+    .sm-circle{
+        max-width: 100px;
+        max-height: 100px;   
+    }
+
+    .sm-md-circle{
+        max-width: 100px;
+        max-height: 100px;
+    }
+
+    .md-circle{
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    .lg-circle{
+        max-width: 250px;
+        max-height: 250px;
+    }
+}
+
+@media only screen and (max-width: 811px) {
+    .app-container{
+        width: 90%;
+        margin: 50px auto;
+    }
+
+    .header-container{
+        margin-bottom: -80px;
+        width: 250px;
+        height: 250px;
+        .circle-header{
+            margin: -90px auto;
+        }
+        h1{
+            font-size: 2em;
+            max-width: 80%;
+            margin:  auto;
+        }
+    }
+
+    .input-field-container{
+        width: 100%;
+    }
+
+    .entry-textarea{
+        min-width: 100%;
+        font-size: 0.9em;
+        padding: 0;
+    }
+
+    .textarea-divider{
+        width: 100%;
+    }
+
+    .textarea-nav{
+        width: 100%;
+    }
+
+    h2{
+        font-size: 1.5em;
+    }
+
+    .entries-container{
+        margin: -60px auto auto;
+    }
+
+    .entry-container{
+        .date-container{
+            font-size: 0.9em;
+        }
+        .inner-entry-container{
+            p{
+                font-size: 0.9em;
+            }
+            .entry-options{
+                opacity: 100%;
+            }
+        }
+    }
+
+    .entry-window{
+        width: 90%;
+        height: 90%;
+        .inner-window{
+            width: 95%;
+            height: 95%;
+            .text-expanded-window{
+                font-size: 0.9em;
+            }
+        } 
+        .date-container{
+            font-size:0.9em;
+        }   
+    }
+
+    .edit-textarea{
+        font-size: 0.9em;
+    }
+
+    .closeBtn{
+        width: 25px;
+        height: 25px;
+        font-size: 25px;
+    }
+
+    .position-2{
+        top: -3%;
+    }
+
+    .position-4{
+        left: 80%;
+        top: 40%;
+    }
+
+    .position-5{
+        left: -2%;
+    }
+
+    .position-7{
+        top: 7%;
+        left: 5%;
+    }
+}
+@media only screen and (max-width: 500px){
+    .app-container{
+        width: 100%;
+        min-width: 320px;
+        margin: 0 auto;
+        padding: 0px;
+        height: auto;
+    }
+
+    .header-container{
+        .circle-header{
+            margin-top: -80px; 
+        }
+        h1{
+            font-size: 1.5em;
+            max-width: 160px;
+            margin-top: 40px;
+            line-height: 1.5em;
+        }
+    }
+
+    .input-field-container{
+        max-height: 137px;
+    }
+
+    .entry-textarea{
+        min-width: 100%;
+        padding: 0;
+        font-size: 0.8em;
+    }
+
+    .entry-textarea:empty:before {
+        font-size: 0.8em;
+    }
+
+    .textarea-divider{
+        width: 100%;
+    }
+
+    .textarea-nav{
+        width:100%;
+    }
+
+    .text-style-buttons{
+        button{
+            width: 25px;
+        }
+    }
+
+    .button-container{
+        width: 50px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        button{
+            font-size: 1.1em;
+            height: 100%;
+            margin: 0;
+        }
+    }
+
+    h2{
+        height: 35px;
+        margin: 100px auto 70px;
+        font-size: 1.1em;
+    }
+
+    .entries-container{
+        margin: -80px auto auto;
+        min-height: 300px;
+    }
+    
+    .entry-container{
+        width: 100%;
+        margin: 5px auto;
+        .date-container{
+            font-size: 0.8em;
+        }
+        .inner-entry-container{
+            p{
+                padding: 2px;
+                font-size: 0.8em;
+            }
+            .entry-options{
+                padding: 2px;
+                width: 50px;
+                height: 20px;
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+    }
+
+    .edit-btn{
+        width: 17px;
+        height: 17px;
+    }
+
+    .delete-btn{
+        width: 17px;
+        height: 17px;
+    }
+
+    .expand-btn{
+        width: 17px;
+        height: 17px;
+        margin: 4px 4px auto auto;
+    }
+
+    .entry-window{
+        min-height: 100%;
+        min-width: 100%;
+        .inner-window{
+            width: 95%;
+            height: 95%;
+            
+            .text-expanded-window{
+                margin-top: 5px;
+                height: 100%;
+                padding: 2px;
+                font-size: 0.8em;
+            }
+        }
+        .closeBtn{
+            font-size: 17px;
+            height: 20px;
+            width: 20px;
+        }
+        .date-container{
+            font-size: 0.8em;
+        }
+    }
+
+    .edit-textarea{
+        font-size: 0.8em;
+    }
+}

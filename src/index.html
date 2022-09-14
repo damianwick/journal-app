@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>journal app</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e35d613714.js" crossorigin="anonymous"></script>
+    <script type="module" src="js/main.js" defer></script>
+</head>
+<body> 
+
+    <div id="app-container" class="app-container">
+        <div class="header-container">
+            <h1>your journal</h1>
+            <div class="circle-header"></div>   
+        </div>
+        
+        <div class="input-field-container">
+            <div id="entry-textarea" class="entry-textarea" contenteditable="true" data-placeholder="Write what's on your mind..."></div>
+            <div class="textarea-divider"></div> 
+            <div class="textarea-nav">
+                <div class="text-style-buttons">
+                    <button class="text-btn" data-element="bold"><i class="fa-solid fa-bold"></i></button>
+                    <button class="text-btn" data-element="italic"><i class="fa-solid fa-italic"></i></button>
+                    <button class="text-btn" data-element="underline"><i class="fa-solid fa-underline"></i></button>
+                    <button class="text-btn align" data-element="justifyLeft"><i class="fa-solid fa-align-left"></i></button>
+                    <button class="text-btn align" data-element="justifyCenter"><i class="fa-solid fa-align-center"></i></button>
+                    <button class="text-btn align" data-element="justifyRight"><i class="fa-solid fa-align-right"></i></button>
+                    <button class="text-btn align" data-element="justifyFull"><i class="fa-solid fa-align-justify"></i></button>
+                </div>
+                <div class="button-container">
+                    <button id ="submit-btn" class="submit-btn">Create</button>
+                </div>
+            </div>
+        </div>
+        <h2>entries</h2>
+        <div id="entries-container" class="entries-container" data-placeholder="You have not made any entries yet"></div>
+    </div>
+
+    <div class="circle sm-md-circle position-5 color-1"></div>
+    <div class="circle sm-md-circle position-6 color-2"></div>
+    <div class="circle lg-circle position-3 color-3"></div>
+    <div class="circle lg-circle position-4 color-4"></div>
+    <div class="circle md-circle position-1 color-5"></div>
+    <div class="circle md-circle position-2 color-6"></div>
+    <div class="circle sm-circle position-7 color-7"></div>
+</body>
+</html>
