@@ -16,7 +16,7 @@ const createFormattingButtons = () => {
         button.addEventListener('click', () => {
             let event = button.dataset['element'];
             document.execCommand(event, false, null);
-            if(event == 'bold' || event == 'italic' || event == 'underline') {
+            if(event === 'bold' || event === 'italic' || event === 'underline') {
                 if(!button.classList.contains('active')) {
                     button.classList.add('active');
                 } else {
