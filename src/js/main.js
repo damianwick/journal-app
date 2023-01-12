@@ -96,8 +96,6 @@ const expandWindow = (thisEntry) => {
     closeWindowBtn.innerHTML='<i class="fa-solid fa-xmark"></i>'
     window.appendChild(closeWindowBtn);
 
-
-    
     const textInWindow = document.createElement('div');
     textInWindow.classList.add('text-expanded-window');
     textInWindow.innerHTML = thisEntry.innerHTML;
