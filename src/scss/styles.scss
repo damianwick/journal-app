@@ -3,7 +3,6 @@ body{
     padding: 0px;
     font-family: 'Lato', sans-serif;
 }
-
 .app-container{
     width: 620px;
     height: auto;
@@ -67,14 +66,12 @@ body{
         opacity: 30%;
     }
 }
-
 .textarea-divider{
     margin: 0 auto;
     background-color: #274057;
     width: 100%;
     height: 2px;
 }
-
 .textarea-nav{
     margin: 0 auto;
     display: block;
@@ -84,7 +81,6 @@ body{
     border: none;
     background-color: #fff;
 }
-
 .text-style-buttons{
     float: left;
     display: inline;
@@ -115,13 +111,11 @@ body{
         background-color: #F5D12C;
     }
 }
-
 .button-container{
     margin-right: 0;
     float: right;
     height: 100%;
     width: 80px;
-    // background-color: pink;
     button{
         font-size: 20px;
         font-family: 'bebas neue', cursive;
@@ -135,11 +129,9 @@ body{
         text-align: center
     }
 }
-
 .button-container:hover{
     background-color: #07F5EA;
 }
-
 h2{
     font-family: 'bebas neue', cursive;
     font-size: 2em;
@@ -147,19 +139,15 @@ h2{
     height: 35px;
     margin: 100px auto 50px;
 }
-
 .entries-container{
     align-self: center;
     overflow: scroll;
     width: 100%;
     min-height: 400px;
-
 }
-
 .entries-container::-webkit-scrollbar {
     display: none;
 }
-
 .entries-container:empty::before{
     content: attr(data-placeholder);
     height: 20px;
@@ -168,7 +156,6 @@ h2{
     text-align: center;  
     color: #fff;
 }
-
 .entry-container{
     position: relative;
     padding: 0;
@@ -209,7 +196,6 @@ h2{
         }
     }
 }
-
 .edit-btn{
     background-image: url(../../assets/edit.svg);
     background-color: transparent;
@@ -219,7 +205,6 @@ h2{
     width: 25px;
     height: 25px;
 }
-
 .delete-btn{
     background-image: url(../../assets/delete.svg);
     background-size: 100% 100%;
@@ -230,7 +215,6 @@ h2{
     width: 25px;
     height: 25px;
 }
-
 .expand-btn{
     background-image: url(../../assets/expand.svg);
     background-size: contain;
@@ -245,23 +229,18 @@ h2{
     width: 25px;
     margin: 5px 5px auto auto;
 }
-
 .edit-btn:hover, .expand-btn:hover{
     background-color: #F5D12C;
 }
-
 .delete-btn:hover{
     background-color: #F5712C;
 }
-
 .entry-container:hover .entry-options{
     opacity: 100%;
 }
-
 .opacity-20{
     opacity: 20%;
 }
-
 .entry-window{
     position: absolute;
     display: flex;
@@ -336,7 +315,6 @@ h2{
         height: 2px;
     }
 }
-
 //background
 .circle{
     border-radius: 50%;
@@ -726,7 +704,6 @@ h2{
             font-size: 0.8em;
         }
     }
-
     .edit-textarea{
         font-size: 0.8em;
     }
