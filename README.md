@@ -9,16 +9,16 @@ Technologies used:
 You can see the project live [here](https://chic-blancmange-b37820.netlify.app/).
 
 ## Main view
-![journal app screenshot](/screenshots/journal-app-screenshot.png)
+![journal app screenshot](./screenshots/journal-app-screenshot.png)
 
 ## Expanded entry view
-![journal app screenshot](/screenshots/journal-app-expand-screenshot.png)
+![journal app screenshot](./screenshots/journal-app-expand-screenshot.png)
 
 ## Editing entry view
-![journal app screenshot](/screenshots/journal-app-edit-screenshot.png)
+![journal app screenshot](./screenshots/journal-app-edit-screenshot.png)
 
 ## Mobile main view
-![journal app screenshot](/screenshots/journal-app-mobile-screenshot.png)
+![journal app screenshot](./screenshots/journal-app-mobile-screenshot.png)
 
 ## Mobile expanded view
-![journal app screenshot](/screenshots/journal-app-expand-mobile-screenshot.png)
+![journal app screenshot](./screenshots/journal-app-expand-mobile-screenshot.png)
